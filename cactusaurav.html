@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="Website Icon" type="jpg" href="webicon.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="PPNeueMontreal-Book.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <title>Cactusaurav</title>
+</head>
+
+<body>
+    <header>
+        <div class="mac-navbar">
+            <div class="mac-btn red" onclick="closeWebsite()"></div>
+            <div class="mac-btn yellow" onclick="minimizeWindow()"></div>
+            <div class="mac-btn green" onclick="toggleFullScreen()"></div>
+            <div class="mac-title">cactusaurav.com</div>
+            <div id="clock" class="clock-container"></div>
+        </div>
+    </header>
+    <div class="navbar-line"></div>
+    <div>
+        <ul class="navbar" id="navbar">
+            <li><a href="cactusaurav.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="#">Blog</a></li>
+            <li id="theme-toggle">
+                <button id="theme-button">
+                    <img src="day-mode.png" alt="Theme Icon 1" id="theme-icon" width="8px" height="8px">
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="introduce-container">
+        <div class="introduction">
+            <div class="image-wrapper">
+                <div class="circleimg">
+                    <img src="saurav2.jpg" alt="Circular Image" class="circular-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="dis">
+            <h2 id="name">Saurav Devkota</h2>
+            <h3 id="tag">Dev & designer</h3>
+            <p id="description">Step into my digital realm, where I'm known as Cactusaurav. I'm a self-taught developer
+                and designer, weaving magic into interfaces with passion and skill.</p>
+        </div>
+    </div>
+    <!--
+    <div class="saurav" id="sauravDiv">
+        <img src="saurav.jpg" id="sauravImg">
+        <img src="vinly.png" id="vinylImg" class="vinyl">
+        <div class="text">My eyes</div>
+        <img src="myeyes.jpeg" id="albumPoster">
+    </div>
+
+    <audio id="audioPlayer" loop>
+        <source src="myeyes.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+-->
+
+
+    <div class="gallery">
+        <h4>Art gallery ── ⋆⋅☆⋅⋆ ──</h4>
+        <div class="row">
+            <div class="column">
+                <img src="image 1.jpg" alt="Image 1">
+            </div>
+            <div class="column">
+                <img src="image 3.jpg" alt="Image 4">
+            </div>
+            <div class="column">
+                <img src="image 5.jpg" alt="Image 5">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="image 6.jpg" alt="Image 3">
+            </div>
+            <div class="column">
+                <img src="image 4.jpg" alt="Image 2">
+            </div>
+            <div class="column">
+                <img src="image 2.jpg" alt="Image 6">
+            </div>
+        </div>
+    </div>
+
+    <div class="woork">
+        <div class="nwork">
+            <h1>Standout work</h1>
+            <p>Here are the project I have worked on :</p>
+            <div class="july">
+                <h4> Jul 2022 </h4>
+            </div>
+            <div class="lvideo">
+                <h2>Andheri Raat</h2>
+                <p>
+                    I made the official lyric video of 'Andheri Raat' for Nishant Subedi (Thasinn). It was the first
+                    official lyric video that I debuted on.<br>
+                </p>
+                <h3>Software used:</h3>
+                <ul>
+                    <li>alight motion</li>
+                    <li>Photoshop</li>
+                </ul>
+                <div class="raat">
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div class="notablework">
+                    <img src="andheri raat.jpg" width="100%" height="auto">
+                </div>
+            </div>
+
+            <!-- image 2-->
+
+            <div class="july">
+                <h4>Oct 2023 </h4>
+            </div>
+            <div class="lvideo">
+                <h2>Navanerai</h2>
+                <p>"This is the first music video that I shot and edited myself. This project presented a challenge as I
+                    aimed to step up in the field of music videos. Nevertheless, I successfully completed it."
+                </p>
+                <h3>Software used:</h3>
+                <ul>
+                    <li>Davinci Resolve</li>
+                    <li>Premier pro</li>
+                </ul>
+                <div class="raat">
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div class="notablework">
+                    <img src="THUMBNAIL.jpg" width="100%" height="auto">
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="chat-container">
+                <div class="message sender">
+                    <img src="profile.jpg" alt="Sender Profile Picture">
+                    <div class="message-details">
+                        <span class="sender">Sauurravv🌵</span><br>
+                        <span class="username">cactusaurav</span><br>
+                    </div>
+                    <div class="message-content">
+                        <span class="message-text">Wyd, cacti?</span>
+                    </div>
+                </div>
+                <div class="message receiver">
+                    <img src="profile.jpg" alt="Receiver Profile Picture">
+                    <div class="receiver-content">
+                        <span>idk, may be coding.</span>
+
+                    </div>
+                </div>
+
+
+                <div class="message sender">
+                    <div class="message-details">
+                    </div>
+                    <span class="message-text">Omg, you do coding?
+                    </span>
+                </div>
+                <div class="message receiver">
+                    <img src="profile.jpg" alt="Receiver Profile Picture">
+                    <div class="receiver-content">
+                        <span>ahaha yess!</span>
+                    </div>
+                </div>
+                <div class="message sender">
+                    <div class="message-details">
+                    </div>
+                    <span class="message-text">what else do you do except coding?</span>
+                </div>
+                <div class="message receiver">
+                    <img src="profile.jpg" alt="Receiver Profile Picture">
+                    <div class="receiver-content">
+                        <span>sometime editing, graphic designing <br>or may be 3d modeling.
+                        </span>
+
+                    </div>
+                </div>
+                <div class="message sender">
+                    <div class="message-details">
+                    </div>
+                    <span class="message-text">Ohh! In what field are you a specialist?</span>
+                </div>
+            </div>
+            <div class="leftchat">
+                <p>cactusaurav left the chat.</p>
+            </div>
+
+
+
+
+            <div class="playlist-container">
+                <div class="playlist-text-container">
+                    <div class="playlist">
+                        <h1>Here's my playlist</h1>
+                    </div>
+                    <p>I
+                    <div class="listen">
+                        <del></del>
+                    </div>
+                    <div class="to">
+                        <a href="">love creating playlist</a>
+                    </div>
+                    </p>
+                </div>
+            </div>
+
+            <div class="spotify">
+                <div class="stittle"> NARCISSIST
+                </div>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/5H1ly2CfhT6b0rw0PvJ0Rz?utm_source=generator"
+                    width="100%" height="100" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+
+            <div class="spotify">
+                <div class="stittle"> OOTD
+                </div>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/4EGhJ5pKFQmOO0iIGVSkBf?utm_source=generator"
+                    width="100%" height="100" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+
+            <div class="spotify">
+                <div class="stittle"> LANA'S KID ☆
+                </div>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/6iWX5LI4ercFJwxzUscBED?utm_source=generator"
+                    width="100%" height="100" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+
+            <div class="spotify">
+                <div class="stittle">TEENAGE ROMANCE
+                </div>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/1355vLPvmWUgtNpWqNZIiy?utm_source=generator"
+                    width="100%" height="100" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+
+
+
+            <div class="connect">
+                <h4>Connect──</h4>
+                <div class="contact-links">
+                    <a href="https://x.com/SauravDevkota10" target="_blank">X</a>
+                    <a href="https://github.com/your-username" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/saurav-devkota-1639512bb/" target="_blank">LinkedIn</a>
+                    <a href="https://open.spotify.com/user/cnnnfbzh46fj8fgjfb5mp9d67?si=d7467a9551d04b5a"
+                        target="_blank">Spotify</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-line"></div>
+        </footer>
+
+
+
+
+        <a href="cactusaurav.html" id="backToTopBtn" onclick="scrollToTop()">
+            <img src="up-arrow.png" alt="Back to Top" id="arrowIcon" width="16px" height="16px">
+        </a>
+        <script src="script.js"></script>
+
+</body>
+
+</html>

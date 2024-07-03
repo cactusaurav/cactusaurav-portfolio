@@ -1,0 +1,736 @@
+@font-face {
+    font-family: 'PP Neue Montreal Book';
+    src: url('/fonts/PPNeueMontreal-Book.woff2') format('woff2'),
+        url('/fonts/PPNeueMontreal-Book.woff') format('woff'),
+        url('/fonts/PPNeueMontreal-Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s, color 0.5s;
+    background-color: black;
+    color: white;
+}
+
+header {
+    background-color: rgba(107, 106, 106, 0.201);
+}
+
+.mac-navbar {
+    display: flex;
+    height: 20px;
+    padding: 5px;
+}
+
+.mac-btn {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+    transition: 0.5s;
+}
+
+.red {
+    background-color: grey;
+}
+
+.red:hover {
+    background-color: #ff5f57;
+}
+
+.yellow {
+    background-color: grey;
+}
+
+.yellow:hover {
+    background-color: #ffbd2e;
+}
+
+.green {
+    background-color: grey;
+}
+
+.green:hover {
+    background-color: #28c745;
+}
+
+.mac-title {
+    color: grey;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 10px;
+    font-size: 12px;
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: bold;
+}
+
+.clock-container {
+    color: grey;
+    font-size: 12px;
+}
+
+.light-theme {
+    background-color: #fff;
+    color: #000000;
+}
+
+.dark-theme {
+    background-color: #000000;
+    color: #fff;
+}
+
+.dark-theme header {
+    background-color: #333;
+}
+
+.navbar {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: bold;
+    display: flex;
+    list-style-type: none;
+    margin: auto;
+    gap: 60px;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    padding-top: 0.5rem;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    border: white;
+    position: relative;
+}
+
+.navbar a {
+    color: rgba(91, 90, 90, 0.821);
+    font-size: 13px;
+    line-height: 20px;
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    transition: 1.5s;
+    color: white;
+}
+
+.light-theme .navbar a:hover {
+    color: #000;
+}
+
+.navbar-line {
+    width: 100%;
+    height: 1.250px;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 68px;
+    z-index: 1;
+}
+
+.light-theme .navbar-line {
+    background-color: grey;
+}
+
+#theme-toggle {
+    display: flex;
+    align-items: center;
+}
+
+#theme-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#theme-icon {
+    width: 24px;
+    height: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 0;
+        gap: 30px;
+    }
+
+    .navbar a {
+        margin-inline-end: -20px;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .navbar-line {
+        top: 4rem;
+    }
+}
+
+.introduce-container {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #d3d3d377;
+    border-radius: 12px;
+}
+
+.dark-theme .introduce-container {
+    background-color: #24242477;
+}
+
+.image-wrapper {
+    border: 5px solid #480303;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+
+.circular-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.circular-image:hover {
+    transform: scale(1.025);
+}
+
+.dis {
+    position: relative;
+    right: -20px;
+
+}
+
+#name h2 {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#tag {
+    position: relative;
+    top: -15px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+}
+
+.dark-theme #tag {
+    color: white;
+}
+
+#description {
+    position: relative;
+    right: 100px;
+    font-size: 15px;
+    padding-bottom: 10px;
+    color: #e4e4e4;
+}
+
+.light-theme #description {
+    color: #3a3a3a;
+}
+
+.saurav {
+    position: relative;
+    display: inline-block;
+}
+
+#albumPoster {
+    cursor: pointer;
+    color: white;
+    filter: none;
+    position: absolute;
+    top: 75%;
+    left: 8%;
+    width: 150px;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 1;
+    user-select: none;
+}
+
+.text {
+    user-select: none;
+    cursor: context-menu;
+    position: absolute;
+    top: calc(70% + 105px);
+    left: 8%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: grey;
+    font-size: 16px;
+    z-index: 3;
+}
+
+.light-theme .text {
+    color: white;
+}
+
+#vinylImg {
+    user-select: none;
+    position: absolute;
+    top: 75%;
+    left: 13%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 145px;
+    height: auto;
+    z-index: 1;
+    transition: transform 0.5s linear;
+    opacity: 1;
+    animation: rotateVinyl 2s linear infinite;
+}
+
+@keyframes rotateVinyl {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #albumPoster {
+        width: 120px;
+        top: 70%;
+    }
+
+    #vinylImg {
+        width: 110px;
+        left: 13%;
+        top: 70%;
+    }
+
+    .text {
+        top: calc(70% + 69px);
+        left: 8%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #albumPoster {
+        width: 80px;
+        top: 50%;
+        margin-left: 5%;
+    }
+
+    #vinylImg {
+        width: 75px;
+        left: 15%;
+        top: 50%;
+        margin-left: 5%;
+    }
+
+    .text {
+        font-size: 10px;
+        top: calc(50% + 40px);
+        left: 8%;
+        margin-left: 5%;
+    }
+}
+
+.saurav img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    user-select: none;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.5;
+}
+
+.light-theme .saurav img {
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.chat-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+
+}
+
+.message {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.message img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.message-details {
+    flex-grow: 1;
+}
+
+.message .sender {
+    font-weight: bold;
+}
+
+.message .username {
+    color: #999;
+    font-weight: lighter;
+}
+
+.message-content {
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 60px;
+}
+
+.message-text {
+    border-radius: 20px;
+    border: 10px solid #405DE6;
+    background-color: #405DE6;
+    color: #fff;
+}
+
+.receiver {
+    align-items: center;
+}
+
+.receiver-content {
+    color: white;
+    font-size: 14px;
+    background-color: #4e4e4e;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.leftchat {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+    margin-top: -35px;
+    font-weight: bolder;
+    color: darkgrey;
+    text-align: center;
+}
+
+
+.woork {
+    max-width: 768px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.july {
+    max-width: 168px;
+}
+
+.july h4 {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    top: 5px;
+}
+
+.lvideo {
+    max-width: 600px;
+    margin-left: 7.5rem;
+    margin-top: -2.5rem;
+
+}
+
+.nwork {
+    color: #999;
+}
+
+.nwork h1 {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: #000;
+}
+
+.nwork p {
+    margin-top: -15px;
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+}
+
+.lvideo h1 {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: #000;
+}
+
+.nwork h2 {
+
+    color: #000;
+}
+
+.nwork h3 {
+    color: #999;
+}
+
+
+.notablework img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width:768px) {
+    .notablework img {
+        border-radius: 10px;
+    }
+
+}
+
+.lvideo h4 {
+    list-style-type: disc;
+}
+
+.lvideo li {
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.dark-theme .lvideo h2,
+.dark-theme .nwork h1 {
+    color: white;
+}
+
+.raat {
+    margin-bottom: 20px;
+}
+
+.raat a {
+
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+
+.raat a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1.5px;
+    background-color: rgb(136, 136, 136);
+    transition: width 0.5s ease-in-out;
+}
+
+.raat a:hover::after {
+    width: 100%;
+}
+
+.dark-theme .raat a {
+    color: white;
+}
+
+.playlist h1 {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+}
+
+.playlist-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.playlist-text-container p,
+.playlist-text-container .listen,
+.playlist-text-container .to {
+    display: inline;
+    margin: 0;
+}
+
+.playlist-text-container p {
+    cursor: context-menu;
+    color: white;
+}
+
+.playlist-text-container .listen {
+    cursor: context-menu;
+}
+
+.to a {
+    color: white;
+    text-decoration: none;
+}
+
+.light-theme .playlist-text-container p,
+.light-theme .to a {
+    color: black;
+}
+
+.spotify {
+    letter-spacing: 0.5px;
+    max-width: 600px;
+    margin: 20px auto;
+    margin-top: -20px;
+}
+
+.stittle {
+    color: #000;
+}
+
+.dark-theme .stittle {
+    color: white;
+}
+
+.gallery {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gallery h4 {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    text-decoration: none;
+    cursor: default;
+}
+
+
+
+.light-theme .gallery h4 {
+    color: black;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+}
+
+.column img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.gallery img {
+    border-radius: 8px;
+    filter: grayscale(70%) brightness(80%);
+    transition: filter 0.5s ease;
+}
+
+.gallery img:hover {
+    filter: grayscale(0%) brightness(100%);
+}
+
+.chat-container h3 {
+    max-width: 768px;
+    margin: 20px auto;
+    padding: 20px;
+    color: white;
+}
+
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 2px;
+    right: 20px;
+    z-index: 999;
+
+}
+
+#arrowIcon {
+    width: 24px;
+    height: 24px;
+}
+
+#backToTopBtn img:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+
+.connect {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.connect h4 {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.dark-theme .connect h4 {
+    color: white;
+}
+
+
+.contact-links {
+    text-align: left;
+    margin-left: 5rem;
+}
+
+.contact-links a {
+    font-size: 18px;
+    margin-right: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+}
+
+.light-theme .contact-links a {
+    color: #000;
+}
+
+.contact-links a.active {
+    opacity: 1;
+}
+
+
+
+.footer-line {
+    width: 100%;
+    height: 1.5px;
+    left: 0;
+    background-color: rgb(136, 136, 136);
+    position: absolute;
+    bottom: -0px;
+
+}

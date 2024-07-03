@@ -1,0 +1,451 @@
+@font-face {
+    font-family: 'PP Neue Montreal Book';
+    src: url('/fonts/PPNeueMontreal-Book.woff2') format('woff2'),
+        url('/fonts/PPNeueMontreal-Book.woff') format('woff'),
+        url('/fonts/PPNeueMontreal-Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s, color 0.5s;
+    background-color: black;
+    color: white;
+}
+
+header {
+    background-color: rgba(107, 106, 106, 0.201);
+}
+
+.mac-navbar {
+    display: flex;
+    height: 20px;
+    padding: 5px;
+}
+
+.mac-btn {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+    transition: 0.5s;
+}
+
+.red {
+    background-color: grey;
+}
+
+.red:hover {
+    background-color: #ff5f57;
+}
+
+.yellow {
+    background-color: grey;
+}
+
+.yellow:hover {
+    background-color: #ffbd2e;
+}
+
+.green {
+    background-color: grey;
+}
+
+.green:hover {
+    background-color: #28c745;
+}
+
+.mac-title {
+    color: grey;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 10px;
+    font-size: 12px;
+}
+
+.clock-container {
+    color: grey;
+    font-size: 12px;
+}
+
+.light-theme {
+    background-color: #fff;
+    color: #000000;
+}
+
+.dark-theme {
+    background-color: #000000;
+    color: #fff;
+}
+
+.dark-theme header {
+    background-color: #333;
+}
+
+.navbar {
+    display: flex;
+    list-style-type: none;
+    margin: auto;
+    gap: 60px;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    padding-top: 0.5rem;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    border: white;
+    position: relative;
+}
+
+.navbar a {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: bold;
+    color: rgba(91, 90, 90, 0.821);
+    font-size: 13px;
+    line-height: 20px;
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    transition: 1.5s;
+    color: white;
+}
+
+.light-theme .navbar a:hover {
+    color: #000;
+}
+
+.navbar-line {
+    width: 100%;
+    height: 1.250px;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 68px;
+    z-index: 1;
+}
+
+.light-theme .navbar-line {
+    background-color: grey;
+}
+
+#theme-toggle {
+    display: flex;
+    align-items: center;
+}
+
+#theme-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#theme-icon {
+    width: 24px;
+    height: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 0;
+        gap: 30px;
+    }
+
+    .navbar a {
+        margin-inline-end: -20px;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .navbar-line {
+        top: 4rem;
+    }
+}
+
+
+
+.gallery {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gallery h4 {
+    font-size: 20px;
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    text-decoration: none;
+    text-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(255, 255, 255),
+        0 0 20px rgb(255, 255, 255),
+        0 0 30px rgb(255, 255, 255);
+}
+
+
+
+.light-theme .gallery h4 {
+    color: black;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+}
+
+.column img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.blender .column:nth-child(2) {
+    margin-top: 20px;
+}
+
+.gallery img {
+    filter: grayscale(70%);
+    transition: filter 0.5s ease;
+}
+
+.gallery img:hover {
+    filter: none;
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+    z-index: 6;
+}
+
+.blender {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.blender h3 {
+    font-size: 20px;
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+    text-shadow:
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgb(255, 255, 255),
+        0 0 20px rgb(255, 255, 255),
+        0 0 30px rgb(255, 255, 255);
+}
+
+
+.blender img {
+    rotate: 200px;
+}
+
+.video-container {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.video-container h2 {
+    color: #f6f660;
+    font-size: 20px;
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+    text-shadow:
+        0 0 5px #f6f660,
+        0 0 10px #f6f660,
+        0 0 20px #f6f660,
+        0 0 30px #f6f660;
+}
+
+.light-theme .video-container h2 {
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #ffffff,
+        0 0 20px #ffffff,
+        0 0 30px #ffffff;
+}
+
+video {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+}
+
+.dark-theme video {
+    box-sizing: border-box;
+    border: 1px solid #fff;
+}
+
+
+#seek-bar-container,
+#seek-bar-container-2,
+#seek-bar-container-3,
+#seek-bar-container-4 {
+    position: relative;
+    width: 80%;
+    margin: 10px auto;
+}
+
+
+.dark-theme #current-time,
+#current-time-2,
+#current-time-3,
+#current-time-4,
+#total-time,
+#total-time-2,
+#total-time-3,
+#total-time-4 {
+    font-size: xx-small;
+    position: absolute;
+    top: -10px;
+    color: rgb(0, 0, 0);
+}
+
+#current-time,
+#current-time-2,
+#current-time-3,
+#current-time-4,
+#total-time,
+#total-time-2,
+#total-time-3,
+#total-time-4 {
+    font-size: xx-small;
+    position: absolute;
+    top: -10px;
+    color: rgb(0, 0, 0);
+}
+
+.dark-theme #current-time,
+.dark-theme #current-time-2,
+.dark-theme #current-time-3,
+.dark-theme #current-time-4,
+.dark-theme #total-time,
+.dark-theme #total-time-2,
+.dark-theme #total-time-3,
+.dark-theme #total-time-4 {
+    color: white;
+}
+
+#current-time,
+#current-time-2,
+#current-time-3,
+#current-time-4 {
+    left: 0;
+}
+
+#total-time,
+#total-time-2,
+#total-time-3,
+#total-time-4 {
+    right: 0;
+}
+
+input[type="range"] {
+    width: 100%;
+    height: 10px;
+    border-radius: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #000;
+    cursor: pointer;
+    position: relative;
+    top: -3px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    background: #bb1414;
+}
+
+.dark-theme input[type="range"]::-webkit-slider-runnable-track {
+    background: #ffffff;
+}
+
+
+.dark-theme input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #8f0000;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    position: relative;
+    top: -4px;
+}
+
+.dark-theme input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    background: #ffffff;
+}
+
+#controls-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.davinci img {
+    position: relative;
+    top: 4px;
+}
+
+.davinci {
+    padding-top: 80px;
+}
+
+.video-container h3 {
+    color: #f2f291;
+}
+
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+#backToTopBtn img {
+    width: 24px;
+    height: 24px;
+}
+
+
+#backToTopBtn img:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
