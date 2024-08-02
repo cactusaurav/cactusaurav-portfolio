@@ -25,8 +25,8 @@
         <ul class="navbar" id="navbar">
             <li><a href="cactusaurav.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="#">Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li id="theme-toggle">
                 <button id="theme-button">
                     <img src="day-mode.png" alt="Theme Icon 1" id="theme-icon" width="12px" height="12px">
@@ -34,9 +34,6 @@
             </li>
         </ul>
     </div>
-
-
-
 
     <div class="gallery">
         <h4>Art gallery ── ⋆⋅☆⋅⋆ ──</h4>
@@ -63,9 +60,6 @@
             </div>
         </div>
     </div>
-
-
-
 
     <div class="blender">
         <h3>Blender
@@ -103,59 +97,60 @@
                     <img src="image 13.jpg" alt="Image 4">
                 </div>
             </div>
-
         </div>
 
         <div class="davinci">
-            <h3> Davinci Resolve
+            <h3>
+                Davinci Resolve
                 <span><img src="davinci.png" width="30px"></span>
             </h3>
-            <div class="video-container">
-                <h2>Monday/Rain day</h2>
-                <video id="myVideo2" width="100%" height="auto" preload="metadata">
-                    <source src="gloomy.mov" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div id="seek-bar-container-2">
-                    <span id="current-time-2">00:00</span>
-                    <input type="range" id="seek-bar-2" value="0" step="0.01">
-                    <span id="total-time-2">00:00</span>
+            <div class="video-slider">
+                <button class="slide-button prev" onclick="slide(-1)">&#10094;</button>
+                <div class="video-wrapper">
+                    <div class="video-item">
+                        <h2>Monday/Rain day</h2>
+                        <video id="myVideo2" width="100%" height="auto" preload="metadata">
+                            <source src="gloomy.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div id="seek-bar-container-2">
+                            <span id="current-time-2">00:00</span>
+                            <input type="range" id="seek-bar-2" value="0" step="0.01">
+                            <span id="total-time-2">00:00</span>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <h2>A day in a korean resturant</h2>
+                        <video id="myVideo3" width="100%" height="auto" preload="metadata">
+                            <source src="a day in my life.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div id="seek-bar-container-3">
+                            <span id="current-time-3">00:00</span>
+                            <input type="range" id="seek-bar-3" value="0" step="0.01">
+                            <span id="total-time-3">00:00</span>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <h2>Take me back</h2>
+                        <video id="myVideo4" width="100%" height="auto" preload="metadata">
+                            <source src="take me.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div id="seek-bar-container-4">
+                            <span id="current-time-4">00:00</span>
+                            <input type="range" id="seek-bar-4" value="0" step="0.01">
+                            <span id="total-time-4">00:00</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-
-            <div class="video-container">
-                <video id="myVideo4" width="100%" height="auto" preload="metadata">
-                    <source src="take me.mov" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div id="seek-bar-container-4">
-                    <span id="current-time-4">00:00</span>
-                    <input type="range" id="seek-bar-4" value="0" step="0.01">
-                    <span id="total-time-4">00:00</span>
-                </div>
-            </div>
-
-
-
-            <div class="video-container">
-                <video id="myVideo3" width="9px" height="16px" preload="metadata">
-                    <source src="a day in my life.mov" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div id="seek-bar-container-3">
-                    <span id="current-time-3">00:00</span>
-                    <input type="range" id="seek-bar-3" value="0" step="0.01">
-                    <span id="total-time-3">00:00</span>
-                </div>
+                <button class="slide-button next" onclick="slide(1)">&#10095;</button>
             </div>
         </div>
-    </div>
-    <a href="#" id="backToTopBtn" onclick="scrollToTop()">
-        <img src="up-arrow.png" alt="Back to Top" id="arrowIcon" width="16px" height="16px"> <!-- Arrow Image -->
-    </a>
-    <script src="gallery.js"></script>
-
+        <a href="#" id="backToTopBtn" onclick="scrollToTop()">
+            <img src="up-arrow.png" alt="Back to Top" id="arrowIcon" width="16px" height="16px">
+        </a>
+        <script src="gallery.js"></script>
 </body>
 
 </html>

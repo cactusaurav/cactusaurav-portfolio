@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="Website Icon" type="jpg" href="webicon.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="PPNeueMontreal-Book.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="blog.css">
+    <title>Cactusaurav</title>
+</head>
+
+<body>
+    <header>
+        <div class="mac-navbar">
+            <div class="mac-btn red" onclick="closeWebsite()"></div>
+            <div class="mac-btn yellow" onclick="minimizeWindow()"></div>
+            <div class="mac-btn green" onclick="toggleFullScreen()"></div>
+            <div class="mac-title">cactusaurav.com</div>
+            <div id="clock" class="clock-container"></div>
+        </div>
+    </header>
+    <div class="navbar-line"></div>
+    <div>
+        <ul class="navbar" id="navbar">
+            <li><a href="cactusaurav.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li id="theme-toggle">
+                <button id="theme-button">
+                    <img src="day-mode.png" alt="Theme Icon 1" id="theme-icon" width="8px" height="8px">
+                </button>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="blog-section">
+        <h2>Blog</h2>
+        <p>Something that I have learn at young age.</p>
+
+        <div class="search-container">
+            <img src="search.png" alt="Search Icon" class="search-icon">
+            <input type="search" id="search" placeholder="Search..." oninput="searchPosts()">
+        </div>
+
+
+        <div class="continer">
+            <!-- Blog Post 1 -->
+
+            <div class="blog1">
+                <div class="date">
+                    <a href="ai.html" class="hover-link">
+                        <h4>Aug 1, 2024</h4>
+                    </a>
+                </div>
+                <div class="blog">
+                    <a href="ai.html" class="hover-link">
+                        <h3>AI: A Buzzword!</h3>
+                    </a>
+                </div>
+                <img src="ai.jpg" alt="Floating Image" id="floating-image">
+            </div>
+
+
+            <!-- Blog Post 2 -->
+
+            <div class="blog2">
+                <div class="date">
+                    <h4>Oct 31, 2024</h4>
+                </div>
+                <div class="blog">
+                    <h3> <a href="/blog/sample-post-2">Sample Blog Post 2</a></h4>
+                </div>
+            </div>
+
+            <!-- Add more blog posts here -->
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-line"></div>
+    </footer>
+
+
+
+
+    <a href="blog.html" id="backToTopBtn" onclick="scrollToTop()">
+        <img src="up-arrow.png" alt="Back to Top" id="arrowIcon" width="16px" height="16px">
+    </a>
+    <script src="blog.js"></script>
+
+</body>
+
+</html>

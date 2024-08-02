@@ -81,7 +81,6 @@ updateClock();
 
 
 
-
 document.addEventListener("DOMContentLoaded", function () {
     const albumPoster = document.getElementById("albumPoster");
     albumPoster.addEventListener("click", toggleVinylAndSong);

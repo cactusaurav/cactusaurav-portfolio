@@ -1,0 +1,337 @@
+@font-face {
+    font-family: 'PP Neue Montreal Book';
+    src: url('/fonts/PPNeueMontreal-Book.woff2') format('woff2'),
+        url('/fonts/PPNeueMontreal-Book.woff') format('woff'),
+        url('/fonts/PPNeueMontreal-Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s, color 0.5s;
+    background-color: black;
+    color: white;
+}
+
+header {
+    background-color: rgba(107, 106, 106, 0.201);
+}
+
+.mac-navbar {
+    display: flex;
+    height: 20px;
+    padding: 5px;
+}
+
+.mac-btn {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+    transition: 0.5s;
+}
+
+.red {
+    background-color: grey;
+}
+
+.red:hover {
+    background-color: #ff5f57;
+}
+
+.yellow {
+    background-color: grey;
+}
+
+.yellow:hover {
+    background-color: #ffbd2e;
+}
+
+.green {
+    background-color: grey;
+}
+
+.green:hover {
+    background-color: #28c745;
+}
+
+.mac-title {
+    color: grey;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 10px;
+    font-size: 14px;
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 400;
+}
+
+.clock-container {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(252, 252, 252);
+    font-size: 12px;
+}
+
+.light-theme .clock-container {
+    color: #000000;
+}
+
+.light-theme {
+    background-color: #fff;
+    color: #000000;
+}
+
+.dark-theme {
+    background-color: #000000;
+    color: #fff;
+}
+
+.dark-theme header {
+    background-color: #333;
+}
+
+.navbar {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: bold;
+    display: flex;
+    list-style-type: none;
+    margin: auto;
+    gap: 60px;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    padding-top: 0.5rem;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    border: white;
+    position: relative;
+}
+
+.navbar a {
+    color: rgba(91, 90, 90, 0.821);
+    font-size: 15px;
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: bold;
+    line-height: 20px;
+    display: block;
+    padding: 2px 12px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    transition: 1.5s;
+    color: white;
+}
+
+
+.light-theme .navbar a:hover {
+    color: #000;
+}
+
+.navbar-line {
+    width: 100%;
+    height: 1.250px;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 68px;
+    z-index: 1;
+}
+
+.light-theme .navbar-line {
+    background-color: grey;
+}
+
+#theme-toggle {
+    display: flex;
+    align-items: center;
+}
+
+#theme-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#theme-icon {
+    width: 24px;
+    height: 24px;
+}
+
+@media only screen and (max-width: 400px) {
+    #theme-toggle {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 0;
+        gap: 30px;
+    }
+
+    .navbar a {
+        margin-inline-end: -20px;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .navbar-line {
+        top: 4rem;
+    }
+}
+
+
+.continer {
+    margin-top: 40px;
+}
+
+.date {
+    max-width: 168px;
+
+}
+
+.date h4 {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: lighter;
+    color: #929292;
+}
+
+.blog {
+    max-width: 600px;
+    margin-left: 7.5rem;
+    margin-top: -2.5rem;
+    margin-bottom: 40px;
+}
+
+.blog h3 {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: lighter;
+}
+
+.blog-section {
+    max-width: 600px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.blog-section .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    width: fit-content;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: #333;
+}
+
+.blog-section .search-container::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 2px solid white;
+    border-radius: 8px;
+    filter: drop-shadow(1px 1px 2px white);
+    z-index: -1;
+}
+
+.light-theme .blog-section .search-container::before {
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.blog-section .search-container .search-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: #333;
+}
+
+
+
+.blog-section input[type="search"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: white;
+    outline: none;
+}
+
+.blog-section input[type="search"]:focus {
+    box-shadow: none;
+    background: #333;
+}
+
+.blog-section a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.dark-theme .blog-section a {
+    color: #fff;
+}
+
+
+#floating-image {
+    display: block;
+    position: absolute;
+    width: 250px;
+    border-radius: 12px;
+    height: auto;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translate(-30%, -200%);
+}
+
+.blog1 {
+    position: relative;
+}
+
+.hover-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 2px;
+    right: 20px;
+    z-index: 999;
+
+}
+
+#arrowIcon {
+    width: 24px;
+    height: 24px;
+}
+
+#backToTopBtn img:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
