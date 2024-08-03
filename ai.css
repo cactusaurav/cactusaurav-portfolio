@@ -200,19 +200,6 @@ header {
 
 }
 
-
-.blog-tittle h2 {
-    font-family: 'PP Neue Montreal Book', sans-serif;
-    font-weight: 500;
-}
-
-.blog-tittle p {
-    font-family: 'PP Neue Montreal Book', sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-
-}
-
 .ai-img img {
     max-width: 600px;
     border-radius: 12px;
@@ -220,6 +207,52 @@ header {
     margin: 0 auto;
     max-width: 100%;
     height: auto;
+}
+
+.blog-tittle h2 {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+}
+
+
+.blog-tittle p {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: -10px;
+
+}
+
+.explain p {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: -10px;
+}
+
+.explain h2 {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.sudden {
+
+    padding-top: 20px;
+}
+
+.sudden h2,
+h3 {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.sudden p {
+    margin-top: -10px;
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
 }
 
 .footer-line {
