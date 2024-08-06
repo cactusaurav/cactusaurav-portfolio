@@ -289,6 +289,10 @@ header {
     color: #fff;
 }
 
+.dark-theme .blog h3 {
+    color: white;
+}
+
 .floating-image {
     display: block;
     position: absolute;
@@ -310,7 +314,7 @@ header {
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
     opacity: 0;
-    transform: translate(50%, -50%);
+    transform: translate(50%, -10%);
 }
 
 .blog2 .floating-image {
