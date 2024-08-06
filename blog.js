@@ -116,36 +116,45 @@ function getArrowImage() {
     }
 }
 
-document.querySelectorAll('.contact-links a').forEach(link => {
-    link.addEventListener('click', function (event) {
-        event.preventDefault();
-        document.querySelectorAll('.contact-links a').forEach(otherLink => {
-            otherLink.classList.remove('active');
-            otherLink.style.opacity = '0.3'; // Reset opacity of other links
-        });
-        this.classList.add('active');
-        this.style.opacity = '1'; // Set opacity of clicked link to 1
-        window.open(this.href, '_blank');
-    });
+function setupHoverEffect(blogClass) {
+    const hoverLinks = document.querySelectorAll(`.${blogClass} .hover-link`);
+    const floatingImage = document.querySelector(`.${blogClass} .floating-image`);
+    let isHovering = false;
+    let lastX = 0, lastY = 0;
 
-    link.addEventListener('mouseover', function () {
-        document.querySelectorAll('.contact-links a').forEach(otherLink => {
-            if (otherLink !== this) {
-                otherLink.style.opacity = '0.5'; // Reduce opacity of other links on hover
-            }
-        });
-    });
+    function positionImage(event) {
+        if (isHovering) {
+            lastX = event.clientX;
+            lastY = event.clientY;
+            requestAnimationFrame(updateImagePosition);
+        }
+    }
 
-    link.addEventListener('mouseout', function () {
-        document.querySelectorAll('.contact-links a').forEach(otherLink => {
-            otherLink.style.opacity = '1'; // Restore opacity of other links on mouseout
+    function updateImagePosition() {
+        if (isHovering) {
+            floatingImage.style.left = `${lastX - (floatingImage.clientWidth / 2)}px`;
+            floatingImage.style.top = `${lastY - floatingImage.clientHeight - 20}px`;
+        }
+    }
+
+    hoverLinks.forEach(link => {
+        link.addEventListener('mouseover', () => {
+            isHovering = true;
+            floatingImage.style.opacity = '1';
+            document.addEventListener('mousemove', positionImage);
+        });
+
+        link.addEventListener('mouseout', () => {
+            isHovering = false;
+            floatingImage.style.opacity = '0';
+            document.removeEventListener('mousemove', positionImage);
         });
     });
-});
+}
 
 function searchPosts() {
     const query = document.getElementById('search').value.toLowerCase();
-    const postsContainer = document.querySelector('.continer');
+    const postsContainer = document.querySelector('.container');
     const posts = postsContainer.getElementsByClassName('blog');
 
     for (let i = 0; i < posts.length; i++) {
@@ -167,38 +176,9 @@ function searchPosts() {
     }
 }
 
-const hoverLinks = document.querySelectorAll('.hover-link');
-const floatingImage = document.getElementById('floating-image');
-let isHovering = false;
-let lastX = 0, lastY = 0;
+// Initialize hover effects for each blog post
+setupHoverEffect('blog1');
+setupHoverEffect('blog2');
 
-function positionImage(event) {
-    if (isHovering) {
-        // Store the mouse position
-        lastX = event.clientX;
-        lastY = event.clientY;
-        requestAnimationFrame(updateImagePosition);
-    }
-}
-
-function updateImagePosition() {
-    if (isHovering) {
-        // Calculate position with a 20px offset
-        floatingImage.style.left = `${lastX - (floatingImage.clientWidth / 2)}px`;
-        floatingImage.style.top = `${lastY - floatingImage.clientHeight - 20}px`;
-    }
-}
-
-hoverLinks.forEach(link => {
-    link.addEventListener('mouseover', () => {
-        isHovering = true;
-        floatingImage.style.opacity = '1';
-        document.addEventListener('mousemove', positionImage);
-    });
-
-    link.addEventListener('mouseout', () => {
-        isHovering = false;
-        floatingImage.style.opacity = '0';
-        document.removeEventListener('mousemove', positionImage);
-    });
-});
+// Add event listener for search functionality
+document.getElementById('search').addEventListener('input', searchPosts);

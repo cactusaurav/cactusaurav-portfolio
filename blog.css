@@ -192,14 +192,12 @@ header {
     }
 }
 
-
-.continer {
+.container {
     margin-top: 40px;
 }
 
 .date {
     max-width: 168px;
-
 }
 
 .date h4 {
@@ -268,8 +266,6 @@ header {
     background: #333;
 }
 
-
-
 .blog-section input[type="search"] {
     width: 100%;
     padding: 10px;
@@ -293,8 +289,7 @@ header {
     color: #fff;
 }
 
-
-#floating-image {
+.floating-image {
     display: block;
     position: absolute;
     width: 250px;
@@ -306,9 +301,28 @@ header {
     transform: translate(-30%, -200%);
 }
 
-.blog1 {
-    position: relative;
+.blog1 .floating-image {
+    display: block;
+    position: absolute;
+    width: 250px;
+    border-radius: 12px;
+    height: auto;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translate(50%, -50%);
+}
 
+.blog2 .floating-image {
+    display: block;
+    position: absolute;
+    width: 250px;
+    border-radius: 12px;
+    height: auto;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translate(50%, -50%);
 }
 
 .hover-link {
