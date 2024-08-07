@@ -8,12 +8,12 @@ themeButton.addEventListener('click', () => {
     if (isDarkTheme) {
         document.body.classList.remove('light-theme');
         document.body.classList.add('dark-theme');
-        themeIcon.src = 'night-mode.png';
+        themeIcon.src = 'Image/night-mode.png';
         themeIcon.alt = 'Night Mode Icon';
     } else {
         document.body.classList.remove('dark-theme');
         document.body.classList.add('light-theme');
-        themeIcon.src = 'day-mode.png';
+        themeIcon.src = 'Image/day-mode.png';
         themeIcon.alt = 'Day Mode Icon';
     }
 
@@ -110,9 +110,9 @@ function scrollToTop() {
 function getArrowImage() {
     var isDarkTheme = document.body.classList.contains("dark-theme");
     if (isDarkTheme) {
-        return "dark-up-arrow.png";
+        return "Image/dark-up-arrow.png";
     } else {
-        return "up-arrow.png";
+        return "Image/up-arrow.png";
     }
 }
 

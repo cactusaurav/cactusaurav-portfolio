@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateTheme() {
         document.body.classList.toggle('dark-theme', isDarkTheme);
         document.body.classList.toggle('light-theme', !isDarkTheme);
-        themeIcon.src = isDarkTheme ? 'night-mode.png' : 'day-mode.png';
-        themeIcon.alt = isDarkTheme ? 'Night Mode Icon' : 'Day Mode Icon';
+        themeIcon.src = isDarkTheme ? 'Image/night-mode.png' : 'Image/day-mode.png';
+        themeIcon.alt = isDarkTheme ? 'Night Mode Icon' : 'Image/Day Mode Icon';
         localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
     }
 
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function getArrowImage() {
-        return document.body.classList.contains('dark-theme') ? 'dark-up-arrow.png' : 'up-arrow.png';
+        return document.body.classList.contains('dark-theme') ? 'Image/dark-up-arrow.png' : 'Image/up-arrow.png';
     }
 
     window.onscroll = scrollFunction;
