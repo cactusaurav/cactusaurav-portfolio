@@ -24,12 +24,12 @@ themeButton.addEventListener('click', () => {
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
     document.body.classList.add('dark-theme');
-    themeIcon.src = 'night-mode.png';
+    themeIcon.src = 'Image/night-mode.png';
     themeIcon.alt = 'Night Mode Icon';
     isDarkTheme = true;
 } else if (savedTheme === 'light') {
     document.body.classList.add('light-theme');
-    themeIcon.src = 'day-mode.png';
+    themeIcon.src = 'Image/day-mode.png';
     themeIcon.alt = 'Day Mode Icon';
     isDarkTheme = false;
 }
@@ -39,8 +39,9 @@ function closeWebsite() {
 }
 
 function minimizeWindow() {
-    (document.exitFullscreen)
-    document.exitFullscreen();
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    }
 }
 
 function toggleFullScreen() {
@@ -86,7 +87,6 @@ function enterFullScreenOnMobile() {
 }
 
 window.onload = enterFullScreenOnMobile;
-const images = document.querySelectorAll('.column img');
 
 window.onscroll = function () { scrollFunction() };
 
@@ -170,7 +170,7 @@ function searchPosts() {
         } else {
             post.style.display = 'none';
             if (date) {
-                date.style.display = 'none'; // Hide date if not found
+                date.style.display = 'none';
             }
         }
     }
