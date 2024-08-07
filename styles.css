@@ -574,6 +574,118 @@ header {
     color: white;
 }
 
+.Write {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.Write h2 {
+    color: #000;
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+}
+
+.Write p {
+    color: #000;
+}
+
+.writes {
+    color: rgb(255, 255, 255);
+    filter: blur(2px);
+}
+
+.writes:hover {
+    color: rgb(255, 255, 255);
+    filter: none;
+}
+
+.light-theme .writes {
+    color: rgb(0, 0, 0);
+    filter: blur(2px);
+}
+
+.light-theme .writes:hover {
+    color: black;
+    filter: none;
+}
+
+.Write a {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+}
+
+.Write h3 {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+    color: #000000;
+    margin-left: 100px;
+    margin-top: 0px;
+}
+
+.blog {
+    margin-left: 20px;
+    margin-top: -40px;
+
+}
+
+
+.blog1,
+.blog2 {
+    position: relative;
+    padding-top: 10px;
+    opacity: 0.3;
+}
+
+.blog1:hover {
+    opacity: 1;
+}
+
+.blog2:hover {
+    opacity: 1;
+}
+
+.blog1 .floating-image,
+.blog2 .floating-image {
+    position: absolute;
+    width: 200px;
+
+    border-radius: 12px;
+    height: auto;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    z-index: 1000;
+}
+
+.blog1 .floating-image {
+    transform: translate(-50px, -150px);
+}
+
+.blog2 .floating-image {
+    transform: translate(-50px, -200px);
+}
+
+.hover-link {
+    position: relative;
+    text-decoration: none;
+}
+
+.dark-theme .Write h2,
+.dark-theme .Write p,
+.dark-theme h4,
+.dark-theme .Write h3,
+.dark-theme.writes {
+    color: white;
+}
+
+.date h4 {
+    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-weight: 500;
+}
+
 .playlist h1 {
     font-family: 'PP Neue Montreal Book', sans-serif;
     font-weight: 500;

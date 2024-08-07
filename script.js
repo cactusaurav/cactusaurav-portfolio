@@ -182,3 +182,43 @@ document.querySelectorAll('.contact-links a').forEach(link => {
         });
     });
 });
+function setupHoverEffect(blogClass) {
+    const hoverLinks = document.querySelectorAll(`.${blogClass} .hover-link`);
+    const floatingImage = document.querySelector(`.${blogClass} .floating-image`);
+    let isHovering = false;
+    let lastX = 0, lastY = 0;
+
+    function positionImage(event) {
+        if (isHovering) {
+            lastX = event.clientX;
+            lastY = event.clientY;
+            requestAnimationFrame(updateImagePosition);
+        }
+    }
+
+    function updateImagePosition() {
+        if (isHovering) {
+            floatingImage.style.left = `${lastX - (floatingImage.clientWidth / 2)}px`;
+            floatingImage.style.top = `${lastY - floatingImage.clientHeight - 20}px`;
+        }
+    }
+
+    hoverLinks.forEach(link => {
+        link.addEventListener('mouseover', () => {
+            isHovering = true;
+            floatingImage.style.opacity = '1';
+            document.addEventListener('mousemove', positionImage);
+        });
+
+        link.addEventListener('mouseout', () => {
+            isHovering = false;
+            floatingImage.style.opacity = '0';
+            document.removeEventListener('mousemove', positionImage);
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    setupHoverEffect('blog1');
+    setupHoverEffect('blog2');
+});
